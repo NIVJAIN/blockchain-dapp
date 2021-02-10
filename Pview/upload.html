@@ -1,0 +1,930 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+
+
+    <!-- <link rel="icon" href="Favicon.png"> -->
+
+    <!-- Bootstrap CSS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  
+    <title>TRUFFLE</title>
+    <style>
+         .close {
+    /*  color: #eac093;*/
+    /* color: #0E6CA6; */
+    color: #808080;
+  }
+    #bodyMsg {
+        color: #e5a663;
+        /* color: #141414; */
+        /* color: #808080; */
+        /* color:rgb(255, 30, 131) ; */
+        text-align: center;
+        /*font-family: eurostile, sans-serif;*/
+        /*font-family: 'Open Sans', sans-serif;*/
+    /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+    font-family: Oswald ;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+        /*font-family: Oswald;*/
+        font-size: 19px;
+        font-style: normal;
+        /* font-variant: small-caps; */
+        font-weight: 25;
+        line-height: 20.4px;
+    }
+    /* #modaltitle {
+      text-align: center;
+    } */
+    .modal-title {
+        /* text-align: center; */
+        color: #e5a663;
+        /* color: white; */
+        /* color:rgb(255, 30, 131);*/
+        /* color: #808080; */
+        /*color:#0E6CA6;*/
+        /*color:#2D5775;*/
+        font-family: Oswald;
+        /*font-family: 'Open Sans', sans-serif;*/
+        font-size: 35px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 900;
+        line-height: 26.4px;
+        /* line-height: 26.4px; */
+    }
+    .modal-content {
+    background-color: #34272a;
+    /* background-color: rgb(209, 164, 0); */
+    /* background-color: #E46863; */
+    /* background-color:rgb(89, 80, 80); */
+    /* background-color: rgb(60, 57, 57); */
+
+    /* background-color: rgb(115, 91, 3); */
+    /* background-color:#141414; */
+  }
+  .modal-header {
+    /* border-bottom: 1px solid #e5a663;*/
+    border-bottom: 1px solid #666666;
+
+  }
+
+  .modal-footer {
+    /* border-top: 1px solid #e5a663;*/
+    border-top: 1px solid #666666;
+
+  }
+    </style>
+</head>
+<body>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button> -->
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center" id="modaltitle">BLOCKCHAIN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p id="bodyMsg"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+    <div class="container">
+    <a class="navbar-brand" href="#">BLOCKCHAIN TRUFFLE WEB3</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+        </ul>
+
+    </div>
+    </div>
+</nav>
+
+<main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Blockchain Registration</div>
+                        <div class="card-body" enctype="multipart/form-data">
+                            <!-- <form name="my-form" onsubmit="return validform()" action="success.php" method=""> -->
+                              <form name="my-form">
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">Company Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" onfocus="App.inputBoxFocus()" id="full_name" class="form-control" name="company-name">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email_address" class="form-control" name="email-address">
+                                    </div>
+                                </div>
+
+                                <!-- <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div> -->
+
+                                <div class="form-group row" method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+                                    <label for="formFileDisabled" class="col-md-4 col-form-label text-md-right">Upload PDF</label>
+                                    <div class="col-md-6">
+                                        <!-- <input type="text" id="email_address" class="form-control" name="email-address"> -->
+                                        <input class="form-control" type="file" id="profile_pic" name="profile_pic" id="formFileDisabled" enabled />
+                                        <!-- <label class="form-control, custom-file-label" for="exampleInputFile" data-browse="{Your button text}">{Upload PDF}</label> -->
+                                    </div>
+                                </div>                             
+                                <div class="col-md-6 offset-md-4">
+                                    <!-- <button onclick="App.BlockchainRegistration()" class="btn btn-primary"> -->
+                                    <button onclick="App.BlockchainRegistration(event)" class="btn btn-primary">
+                                    Register
+                                    </button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>  
+<br>
+
+<div class="cotainer">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header">Blockchain Output</div>
+                  <div class="card-body" enctype="multipart/form-data">
+                    <div class="table-responsive">
+                      <table class="card-table table tabBody">
+                        <thead>
+                          <tr>
+                            <th scope="col">#No</th>
+                            <th scope="col">Blockchain</th>
+                            <th scope="col">Txn Details</th>
+                            <!-- <th scope="col">Fourth&nbsp;column</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+</div>
+<br>
+
+<div class="container" >
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+    </div>
+  </div>
+</div>
+
+
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<br>
+<div class="cotainer">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header">Blockcahin Output</div>
+                  <div class="card-body" enctype="multipart/form-data">
+                    <div class="table-responsive">
+                      <table class="card-table table tabBody">
+                        <thead>
+                          <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <!-- <th scope="col">Fourth&nbsp;column</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <!-- <td>Data row 1</td> -->
+                          </tr>
+                          <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <!-- <td>Data row 2</td> -->
+                          </tr>
+                          <tr>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>Data row 3</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+</div>
+<!-- <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Table in a card
+  </div>
+  <table class="card-table table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">Name 01</td>
+        <td>data 1</td>
+      </tr>
+      <tr>
+        <td class="not-first-cell">data 2</td>
+      </tr>
+      <tr>
+        <td class="not-first-cell">data 3</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Name 02</td>
+        <td class="not-first-cell">data 1</td>
+      </tr>
+      <tr>
+        <td class="not-first-cell">data 2</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<br><br>
+
+
+
+</main>
+<script  src="https://code.jquery.com/jquery-3.3.1.js" ></script> 
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="/upload.js"></script> -->
+<script>
+  var arrayData = [
+    {
+      blockHash: "0x917c7679f867844d15569c3122e811cfb3f8bdd290fd30c42cce74158b07116a",
+      blockNumber: 7,
+      contractAddress: null,
+      cumulativeGasUsed: 264227,
+      from: "0xb4818b96211ef7a4ba9a33ead22237d1e2fc4a59",
+      gasUsed: 264227,
+      status: true,
+      to: "0x03c1d778712c1e503be47b426c9d47374b0e401e",
+      transactionHash: "0xe7c7edbbcff691f4857aeae2476323221cd8c19fb5decfc8da473eca93d3191a",
+      transactionIndex: 0
+  },
+  {
+    blockHash: "SDFAS",
+    blockNumber: 7,
+    contractAddress: null,
+    cumulativeGasUsed: 264227,
+    from: "ASDF",
+    gasUsed: 264227,
+    status: true,
+    to: "ASDF",
+    transactionHash: "ASDF",
+    transactionIndex: 0
+},
+]
+  const App = {    
+    // BlockchainRegistration : async function(e){
+    //     e.preventDefault();
+    //     try {
+    //         var _companyname = document.forms["my-form"]["company-name"].value;
+    //         var _companyemail = document.forms["my-form"]["email-address"].value;
+    //         var _pdf_file = document.forms["my-form"]["profile_pic"].value;
+    //         var pdfFile = document.querySelector('#profile_pic');
+    //         let profile_file = pdfFile.files[0]
+    //         // var just_filename = _pdf_file.split(/(\\|\/)/g).pop()
+    //         // var pdf_file = document.querySelector('#profile_pic'); doesnt work
+    //         // var emailid = document.forms["my-form"]["email-address"].value;
+            
+    //         if(_companyname==null || _companyname=="")
+    //         {
+    //             alert("Please Enter Your Company Name");
+    //             return false;
+    //         }else if (_companyemail==null || _companyemail=="")
+    //         {
+    //             alert("Please Enter Your Email Address");
+    //             return false;
+    //         }
+    //         else if (_pdf_file==null || _pdf_file=="")
+    //         {
+    //             alert("Please select PDF file only");
+    //             return false;
+    //         }
+    //         console.log(_pdf_file)
+    //         let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file)
+    //         console.log(f_upload)
+    //         let reqBody = JSON.stringify({
+    //             email: 'niv.jain@gmail.com',
+    //             companyname: _companyname,
+    //             companyemail: _companyemail,
+    //             pdf_filename: f_upload
+    //         }); 
+    //         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+    //         let methodType = 'POST'
+    //         let response = await App.axios_request(urlAxios,methodType,reqBody)
+    //         console.log("response",response)  
+    //         let updateTable = await App.update_table(response.data)
+    //         // $('#bodyMsg').html("Are you sure you want to give away all of your tokens");
+    //         // $('#myModal').modal("show");         
+    //     } catch (error) {
+    //       var data = {
+    //         blockHash: "0x917c7679f867844d15569c3122e811cfb3f8bdd290fd30c42cce74158b07116a",
+    //         blockNumber: 7,
+    //         contractAddress: null,
+    //         cumulativeGasUsed: 264227,
+    //         from: "0xb4818b96211ef7a4ba9a33ead22237d1e2fc4a59",
+    //         gasUsed: 264227,
+    //         status: true,
+    //         to: "0x03c1d778712c1e503be47b426c9d47374b0e401e",
+    //         transactionHash: "0xe7c7edbbcff691f4857aeae2476323221cd8c19fb5decfc8da473eca93d3191a",
+    //         transactionIndex: 0
+    //       }
+    //       if(error.info) {
+    //         let updating_table = await App.update_table(error.info)
+    //       }
+    //       // let updating = await App.update_array_table(arrayData)
+    //       if(error.message){
+    //         $('#bodyMsg').html(error.message);
+    //         $('#myModal').modal("show");
+    //         return
+    //       }
+    //       if(error.error.startsWith("Forbidden")) {
+    //         $('#bodyMsg').html(error.error);
+    //         $('#myModal').modal("show");
+    //         try {
+    //           let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+    //           App.BlockchainRegistration(e);
+    //         } catch(error){
+    //           console.log("refresh token", error)
+    //           window.location = "/"
+    //         }
+    //       }
+    //     }
+    //   },
+    BlockchainRegistration : async function(e){
+        e.preventDefault();
+        try {
+            var _companyname = document.forms["my-form"]["company-name"].value;
+            var _companyemail = document.forms["my-form"]["email-address"].value;
+            var _pdf_file = document.forms["my-form"]["profile_pic"].value;
+            var pdfFile = document.querySelector('#profile_pic');
+            let profile_file = pdfFile.files[0]
+            if(_companyname==null || _companyname=="")
+            {
+                alert("Please Enter Your Company Name");
+                return false;
+            }else if (_companyemail==null || _companyemail=="")
+            {
+                alert("Please Enter Your Email Address");
+                return false;
+            }
+            else if (_pdf_file==null || _pdf_file=="")
+            {
+                alert("Please select PDF file only");
+                return false;
+            }
+            var admin_email = "niv.jain@gmail.com"
+            let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file,admin_email)
+            // let f_upload = await App.file_upload("http://localhost:5000/blockchain/buffer", "POST", profile_file, admin_email)
+            console.log("f_upload", f_upload)
+            // return
+            console.log(f_upload)
+            let reqBody = JSON.stringify({
+                email: 'niv.jain@gmail.com',
+                companyname: _companyname,
+                companyemail: _companyemail,
+                pdf_filename: f_upload.result
+            });     
+            // return
+            let pdf_transaction = await App.Pdf_Txn(reqBody)    
+            console.log(pdf_transaction)
+
+            let updateTable = await App.update_table(pdf_transaction.result) 
+        } catch (error) {
+          console.log("console.log(error==>>)", error)
+
+          if(error.err){
+            $('#bodyMsg').html(error.err);
+            $('#myModal').modal("show");
+            return
+          }
+          if(error.info) {
+            let updating_table = await App.update_table(error.info)
+            // return
+          }
+          if(error.message){
+            $('#bodyMsg').html(error.message);
+            $('#myModal').modal("show");
+            return
+          }
+          if(error.tokenError) {
+            App.GetNewToken(error.tokenError);
+            // $('#bodyMsg').html(error.error);
+            // $('#myModal').modal("show");
+            // try {
+            //   let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+            //   // App.BlockchainRegistration(e);
+            //   console.log("getNewToken", getNewToken)
+            // } catch(error){
+            //   console.log("refresh token", error)
+            //   window.location = "/"
+            // }
+          } else {
+            console.log("erlse error", error)
+            $('#bodyMsg').html(JSON.stringify(error));
+            $('#myModal').modal("show");
+            return
+          }
+        }
+      },
+      GetNewToken: async function(msg){
+        return new Promise(async(resolve,reject)=>{
+          $('#bodyMsg').html(msg);
+            $('#myModal').modal("show");
+            try {
+              let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+              // App.BlockchainRegistration(e);
+              resolve(getNewToken)
+              console.log("getNewToken", getNewToken)
+            } catch(error){
+              console.log("refresh token", error)
+              window.location = "/"
+            }
+        })
+
+      },
+      BlockchainRegistration___ : async function(e){
+        e.preventDefault();
+        try {
+            var _companyname = document.forms["my-form"]["company-name"].value;
+            var _companyemail = document.forms["my-form"]["email-address"].value;
+            var _pdf_file = document.forms["my-form"]["profile_pic"].value;
+            var pdfFile = document.querySelector('#profile_pic');
+            let profile_file = pdfFile.files[0]
+            if(_companyname==null || _companyname=="")
+            {
+                alert("Please Enter Your Company Name");
+                return false;
+            }else if (_companyemail==null || _companyemail=="")
+            {
+                alert("Please Enter Your Email Address");
+                return false;
+            }
+            else if (_pdf_file==null || _pdf_file=="")
+            {
+                alert("Please select PDF file only");
+                return false;
+            }
+            var admin_email = "niv.jain@gmail.com"
+            // let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file,admin_email)
+            let f_upload = await App.file_upload("http://localhost:5000/blockchain/buffer", "POST", profile_file, admin_email)
+            console.log("f_upload", f_upload)
+            $('#bodyMsg').html(f_upload.result);
+            $('#myModal').modal("show");         
+            return
+        } catch (error) {
+          console.log("eororor", error)
+          if(error.message){
+            $('#bodyMsg').html(error.message);
+            $('#myModal').modal("show");
+            return
+          }
+        }
+      },
+      Pdf_Txn : async function(reqBody){
+        return new Promise(async(resolve,reject)=>{
+          try {
+            let urlAxios = 'http://localhost:5000/blockchain/pdf'
+            let methodType = 'POST'
+            let response = await App.axios_request(urlAxios,methodType,reqBody)
+            console.log("pdf_txn", response)
+            resolve(response)
+          } catch(error){
+            reject(error)
+          }
+        })
+      },
+      update_table : async function(data){
+        return new Promise((resolve,reject)=>{
+          $(".tabBody tbody ").html("");        // Or
+          $(".tabBody tbody").html("&nbsp;");  // Add a non-breaking space. (Recommended)
+          $(".tabBody tbody").empty(); // this is to clean table for dom.
+          var arrayData = [];
+          arrayData.push(data)
+          var pdf_filename = "";
+          i =0;
+            for (const [key, value] of Object.entries(data)) {
+              i++
+              // console.log(`${key}: ${value}`);
+              if(key == "pdf_filename") {
+                pdf_filename = value
+              }
+               var state  = '<tr><td text-align=left">' 
+                  +  (i) + ". " 
+                  + '</td><td text-align=left">' 
+                  + key
+                  + '</td><td text-align=left"> ' 
+                  + `${value}`
+                  + '</td></tr>';
+                  $('.tabBody').find('tbody').append(state);
+            }
+            // <a href="resume.pdf">click here todownload the PDF file.</a>
+            var pdf_href = '<tr><td text-align=left">' 
+                  +  (i+1) + ". " 
+                  + '</td><td text-align=left">' 
+                  + "pdf_link"
+                  + '</td><td text-align=left"> ' 
+                  + `<a target="_blank" rel="noopener noreferrer"  href="http://localhost:5000/${pdf_filename}">${pdf_filename}</a>`
+                  + '</td></tr>';
+            $('.tabBody').find('tbody').append(pdf_href);
+          resolve(true)
+        })
+      },
+      update_array_table : async function(data){
+        return new Promise((resolve,reject)=>{
+          $(".tabBody tbody ").html("");        // Or
+          $(".tabBody tbody").html("&nbsp;");  // Add a non-breaking space. (Recommended)
+          $(".tabBody tbody").empty(); // this is to clean table for dom.
+
+          for(let i =0; i< data.length; i++){
+            for (const [key, value] of Object.entries(data[i])) {
+              
+              // console.log(`${key}: ${value}`);
+               var state  = '<tr><td text-align=left">' 
+                  +  (i) + ". " 
+                  + '</td><td text-align=left">' 
+                  + key
+                  + '</td><td text-align=left"> ' 
+                  + `${value}`
+                  + '</td></tr>';
+                  $('.tabBody').find('tbody').append(state);
+            }
+          }
+      
+
+          resolve(true)
+        })
+      },
+      axios_request : async function(urlAxios, requestType,reqBody,) {
+          return new Promise (async(resolve,reject)=>{
+            try {
+                let res = await axios({
+                    method: 'POST',
+                    method: requestType,
+                    headers: { 'content-type': 'application/json'},
+                    url : urlAxios,
+                    data: reqBody
+                });
+                // console.log(res)
+                let data = res.data;
+                // console.log(data, res);
+               return resolve(data)
+            } catch (error) {
+                // return error.response;
+                if (error.response) {
+                  // client received an error response (5xx, 4xx)
+                  console.log(error.response.data); // this is the main part. Use the response property from the error object
+                  return reject(error.response.data)
+                } else if (error.request) {
+                  // client never received a response, or request never left
+                  console.log(error.request)
+                  reject("no response from server")
+                } else {
+                  // anything else
+                  console.log(error)
+                  reject(error)
+                }
+            }
+          })
+        },
+        file_upload: async function(urlAxios, requestType, pdf_file, _admin_email) {
+            return new Promise(async(resolve,reject)=>{
+                let formData = new FormData();
+                formData.append("profile_pic", pdf_file);
+                formData.append("email", _admin_email)
+                await  axios.post(urlAxios,
+                    formData, {
+                      headers: {
+                        'Content-Type': 'multipart/form-data'
+                      }
+                    }
+                  ).then(async function (result) {
+                    console.log('SUCCESS!!', result);
+                    resolve(result.data)
+                  })
+                  .catch(async function (error) {
+                    if (error.response) {
+                      // client received an error response (5xx, 4xx)
+                      console.log(error.response.data); // this is the main part. Use the response property from the error object
+                      return reject(error.response.data)
+                    } else if (error.request) {
+                      // client never received a response, or request never left
+                      console.log(error.request)
+                      reject("no response from server")
+                    } else {
+                      // anything else
+                      console.log(error)
+                      reject(error)
+                    }
+                  });
+            })
+        },
+        //Append text to input element
+        jQ_append : function async (id_of_input, text){
+          return new Promise((resolve,reject)=>{
+           try {
+            var input_id = '#'+id_of_input;
+            $(input_id).val($(input_id).val() + text);
+            resolve(true)
+           } catch (error) {
+              reject(error)
+           }
+          })
+        },
+        inputBoxFocus : function(){
+          $(".tabBody tbody ").html("");        // Or
+          $(".tabBody tbody").html("&nbsp;");  // Add a non-breaking space. (Recommended)
+          $(".tabBody tbody").empty(); // this is to clean table for dom.
+        },
+    }
+
+window.App = App;
+
+// async function BlockchainRegistration2(){
+//     try {
+//         let reqBody = JSON.stringify({
+//             email: 'niv.jain@gmail.com',
+//             companyname: 'JarvisApple',
+//             companyemail: 'applewatch@gmail.com',
+//             pdf_filename: 'apple.pdf'
+//         });
+//         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+//         let methodType = 'POST'
+//         let response = await App.axios_request(urlAxios,methodType,reqBody)
+//         console.log(response)
+//     } catch (error) {
+//       console.error("Failure reason", error);
+//     }
+//   }
+
+window.addEventListener("load", async function() {
+//   App.start();
+          let append = await App.jQ_append("full_name", "sripaljain")
+          let append2 = await App.jQ_append("email_address", "sripal.jain@gmail.com")
+});
+
+
+
+
+// import Web3 from "web3";
+// import { default as contract } from 'truffle-contract'
+// import axios from "axios";
+// // import metaCoinArtifact from "../../build/contracts/MetaCoin.json";
+// import metaCoinArtifact from "../../build/contracts/SmartContract.json";
+// var PdfContract = contract(metaCoinArtifact);
+
+// const App = {
+//   web3: null,
+//   contractInstance: null,
+//   account: null,
+//   meta: null,
+//   start: async function() {
+//     const { web3 } = this;
+//     try {
+//     //  PdfContract.setProvider(new Web3.providers.HttpProvider('http://localhost:7545'));
+//       // get contract instance
+//       PdfContract.setProvider(web3.currentProvider);
+//       const networkId = await web3.eth.net.getId();
+//       const deployedNetwork = metaCoinArtifact.networks[networkId];
+//       this.meta = new web3.eth.Contract(
+//         metaCoinArtifact.abi,
+//         deployedNetwork.address,
+//       );
+
+//       // get accounts
+//       const accounts = await web3.eth.getAccounts();
+//       this.account = accounts[0];
+//     } catch (error) {
+//       console.error("Could not connect to contract or chain.");
+//     }
+//   },
+//   register: async function(){
+//     // {username, emailid} = await validform();
+//     var username = document.forms["my-form"]["full-name"].value;
+//     var emailid = document.forms["my-form"]["email-address"].value;
+//     console.log("heheheheheheheeheheheheheheh", this.account)
+//     const { register } = this.meta.methods;
+//     console.log("resiger", register, username, emailid)
+//     const reg = await register(web3.utils.asciiToHex("sripal.jain@gmail.com"),web3.utils.asciiToHex("sripal")).send({gas: 140000, from: this.account})
+    
+//     // await PdfContract.deployed().then(function(instance){
+//     //   console.log("instansssce", instance)
+//     // }).catch(function(err){
+//     //   console.log(err)
+//     // })
+//     console.log(reg)
+//     // console.log("sfasdf", await this.getInfo())
+//   }, 
+//   getInfo2: async function(){
+//     try {
+//       // await contract.methodCall();
+//       const { getInfo } = this.meta.methods;
+//       var email = this.web3.utils.asciiToHex("sripal.jain@gmail.com")
+//       // var info = await getInfo(this.web3.utils.asciiToHex("sripal.jain@gmail.com")).call();
+//       var info = await getInfo(email).call();
+//       var uname = await this.web3.utils.hexToAscii(info[0])
+//       var emailid = await this.web3.utils.hexToAscii(info[1])
+//       console.log("Info==================",uname, emailid)
+//       // alert(uname)
+
+//     } catch (error) {
+//       // error.reason now populated with an REVERT reason
+//       console.error("Failure reason", error);
+//     }
+//   },
+//   BlockchainRegistration: async function(){
+//     try {
+//         const options = {
+//             method: 'POST',
+//             url: 'http://localhost:5000/blockchain/pdf',
+//             // headers: {'user-agent': 'vscode-restclient', 'content-type': 'application/json'},
+//             headers: { 'content-type': 'application/json'},
+//             data: {
+//               email: 'niv.jain@gmail.com',
+//               companyname: 'JarvisApple',
+//               companyemail: 'applewatch@gmail.com',
+//               pdf_filename: 'apple.pdf'
+//             }
+//           };
+//        response = await axios.request(options)
+//        console.log(response.data)
+//     } catch (error) {
+//       console.error("Failure reason", error);
+//     }
+//   },
+// } //App
+
+// window.App = App;
+
+// window.addEventListener("load", function() {
+//   if (window.ethereum) {
+//     // use MetaMask's provider
+//     App.web3 = new Web3(window.ethereum);
+//     window.ethereum.enable(); // get permission to access accounts
+//   } else {
+//     console.warn(
+//       "No web3 detected. Falling back to http://127.0.0.1:7545. You should remove this fallback when you deploy live",
+//     );
+//     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+//     App.web3 = new Web3(
+//       new Web3.providers.HttpProvider("http://127.0.0.1:7545"),
+//     );
+//     // PdfContract.setProvider(new Web3.providers.HttpProvider('http://localhost:7545'));
+//   }
+//   // PdfContract.setProvider(App.web3.currentProvider);
+//   // var email = App.web3.utils.asciiToHex("sripal.jain@gmail.com")
+//   // PdfContract.deployed().then(function(instance){
+//   //   console.log("instance", instance)
+//   //   instance.getInfo(email).then(function(result){
+//   //     var uname =  App.web3.utils.hexToAscii(result[0])
+//   //     console.log("sfasfasfsfsfsfsafsdf===", uname)
+//   //   }).catch(function(err){
+//   //     console.log("PdfContract-------errir", err)
+//   //   })
+//   // }).catch(function(err){
+//   //   console.log("Instance.Error", err)
+//   // })
+//   App.start();
+// });
+
+// // axios.request(options).then(function (response) {
+// //     console.log(response.data);
+// // }).catch(function (error) {
+// //     console.error(error);
+// // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // $( document ).ready(function() {
+// //   if (typeof web3 !== 'undefined') {
+// //     console.warn("Using web3 detected from external source like Metamask")
+// //     // Use Mist/MetaMask's provider
+// //     window.web3 = new Web3(web3.currentProvider);
+// //   } else {
+// //     console.warn("No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you deploy live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");
+// //     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+// //     window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+// //   }
+
+// //   PdfContract.setProvider(web3.currentProvider);
+// //   var email = web3.utils.asciiToHex("sripal.jain@gmail.com")
+// //   PdfContract.deployed().then(function(instance){
+// //     console.log("instance", instance)
+// //     instance.getInfo(email).then(function(result){
+// //       var uname =  web3.utils.hexToAscii(result[0])
+// //       console.log("sfasfasfsfsfsfsafsdf===", uname)
+// //     }).catch(function(err){
+// //       console.log("PdfContract-------errir", err)
+// //     })
+// //   }).catch(function(err){
+// //     console.log("Instance.Error", err)
+// //   })
+
+// // });
+</script>
+</body>
+</html>

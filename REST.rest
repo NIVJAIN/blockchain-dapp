@@ -1,0 +1,77 @@
+@baseUrl=http://localhost:5000
+###
+GET {{baseUrl}}/blockchain/check
+###
+POST {{baseUrl}}/blockchain/register
+Content-Type: application/json
+
+{
+    "name" : "nivjain",
+    "email" : "niv.jain@gmail.com"
+}
+###
+GET {{baseUrl}}/blockchain/email/niv.jain@gmail.com
+### cmd alt c to generate code
+POST {{baseUrl}}/blockchain/pdf
+Content-Type: application/json
+
+{
+    "email" : "niv.jain@gmail.com",
+    "companyname" : "JarvisApple",
+    "companyemail" : "applewatch@gmail.com",
+    "pdf_filename" : "apple.pdf"
+}
+###
+
+POST {{baseUrl}}/blockchain/pdfdetails
+Content-Type: application/json
+
+{
+    "email" : "niv.jain@gmail.com",
+    "pdf_filename" :"15-Dec-iwatch5-one-1612789775983.pdf"
+}
+###
+POST {{baseUrl}}/blockchain/filehash
+Content-Type: application/json
+
+{
+    "pdf_filename" : "apple.pdf"
+}
+###
+POST {{baseUrl}}/blockchain/foohash
+Content-Type: application/json
+
+{
+    "pdf_filename" : "apple.pdf"
+}
+###
+GET {{baseUrl}}/blockchain/foohash
+###
+
+
+GET {{baseUrl}}/blockchain/pdflist
+###
+GET {{baseUrl}}/kafka/check
+###
+# 0xfe51c71621243273de21d09589aad73b8a7009d7d31ab0e4d96383f75ce7a0c7
+# 0xfe51c71621243273de21d09589aad73b8a7009d7d31ab0e4d96383f75ce7a0c7
+
+# import axios from "axios";
+
+# const options = {
+#   method: 'POST',
+#   url: 'http://localhost:5000/blockchain/pdf',
+#   headers: {'user-agent': 'vscode-restclient', 'content-type': 'application/json'},
+#   data: {
+#     email: 'niv.jain@gmail.com',
+#     companyname: 'JarvisApple',
+#     companyemail: 'applewatch@gmail.com',
+#     pdf_filename: 'apple.pdf'
+#   }
+# };
+
+# axios.request(options).then(function (response) {
+#   console.log(response.data);
+# }).catch(function (error) {
+#   console.error(error);
+# });

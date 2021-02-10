@@ -1,0 +1,390 @@
+[2020-07-09T12:45:47.061] [ERROR] PROCESS_RABBITMQ - Unable to get query details from db 
+[2020-07-09T12:45:47.062] [ERROR] PROCESS_RABBITMQ - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:46:58.773] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:46:58.773] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:49:18.009] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:49:18.009] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:50:30.614] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:50:30.615] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:54:47.436] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:54:47.436] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:56:07.463] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:56:07.463] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T12:58:07.510] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T12:58:07.511] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T13:00:07.558] [ERROR] PROCESS_KAFKA - Unable to get query details from db 
+[2020-07-09T13:00:07.558] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T14:03:54.729] [ERROR] PROCESS_KAFKA - Unable to get query details from db  { CastError: Cast to ObjectId failed for value ""5f06b3459ef9b627ea4ebdd9"" at path "_id" for model "News"
+    at model.Query.exec (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4351:21)
+    at model.Query.Query.then (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4443:15)
+    at GET_QUERY_DETAILS_FROM_MONGODB.Promise (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:113:10)
+    at new Promise (<anonymous>)
+    at GET_QUERY_DETAILS_FROM_MONGODB (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:110:12)
+    at Object.exports.CALL_NEWS_API (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:36:26)
+    at ConsumerGroup.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/ConsumerHighLevel.js:33:42)
+    at ConsumerGroup.emit (events.js:198:13)
+    at ConsumerGroup.EventEmitter.emit (domain.js:448:20)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:68:16
+    at decodeMessageSet (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:308:15)
+    at enqueue (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:407:15)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:3880:24
+    at replenish (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1011:17)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1016:9
+    at eachOfLimit (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1041:24)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1046:16
+    at _parallel (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:3879:5)
+    at Object.series (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:4735:5)
+    at _decodeFetchResponse (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:244:9)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:199:12
+    at KafkaClient.Client.invokeResponseCallback (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:589:18)
+    at KafkaClient.Client.handleReceivedData (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:569:10)
+    at KafkaClient.handleReceivedData (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/kafkaClient.js:1378:48)
+    at Socket.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/kafkaClient.js:797:10)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+  messageFormat: undefined,
+  stringValue: '""5f06b3459ef9b627ea4ebdd9""',
+  kind: 'ObjectId',
+  value: '"5f06b3459ef9b627ea4ebdd9"',
+  path: '_id',
+  reason:
+   Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+       at new ObjectID (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/bson/lib/bson/objectid.js:59:11)
+       at castObjectId (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/cast/objectid.js:25:12)
+       at ObjectId.cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schema/objectid.js:267:12)
+       at ObjectId.SchemaType.applySetters (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1031:12)
+       at ObjectId.SchemaType._castForQuery (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1459:15)
+       at ObjectId.SchemaType.castForQuery (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1449:15)
+       at ObjectId.SchemaType.castForQueryWrapper (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1428:15)
+       at cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/cast.js:326:32)
+       at model.Query.Query.cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4740:12)
+       at model.Query.Query._castConditions (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:1865:10)
+       at model.Query.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:2122:8)
+       at model.Query._wrappedThunk [as _findOne] (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/helpers/query/wrapThunk.js:16:8)
+       at process.nextTick (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kareem/index.js:369:33)
+       at process._tickCallback (internal/process/next_tick.js:61:11) }
+[2020-07-09T14:03:54.735] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T14:06:37.779] [ERROR] PROCESS_KAFKA - Unable to get query details from db  { CastError: Cast to ObjectId failed for value "{"id":"5f06b3e68ded4329756d7077"}" at path "_id" for model "News"
+    at model.Query.exec (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4351:21)
+    at model.Query.Query.then (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4443:15)
+    at GET_QUERY_DETAILS_FROM_MONGODB.Promise (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:113:10)
+    at new Promise (<anonymous>)
+    at GET_QUERY_DETAILS_FROM_MONGODB (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:110:12)
+    at Object.exports.CALL_NEWS_API (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/call_news_api.js:36:26)
+    at ConsumerGroup.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/ConsumerHighLevel.js:33:42)
+    at ConsumerGroup.emit (events.js:198:13)
+    at ConsumerGroup.EventEmitter.emit (domain.js:448:20)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:68:16
+    at decodeMessageSet (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:308:15)
+    at enqueue (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:407:15)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:3880:24
+    at replenish (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1011:17)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1016:9
+    at eachOfLimit (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1041:24)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:1046:16
+    at _parallel (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:3879:5)
+    at Object.series (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/async/dist/async.js:4735:5)
+    at _decodeFetchResponse (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:244:9)
+    at /Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/protocol/protocol.js:199:12
+    at KafkaClient.Client.invokeResponseCallback (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:589:18)
+    at KafkaClient.Client.handleReceivedData (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/baseClient.js:569:10)
+    at KafkaClient.handleReceivedData (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/kafkaClient.js:1378:48)
+    at Socket.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kafka-node/lib/kafkaClient.js:797:10)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+  messageFormat: undefined,
+  stringValue: '"{"id":"5f06b3e68ded4329756d7077"}"',
+  kind: 'ObjectId',
+  value: '{"id":"5f06b3e68ded4329756d7077"}',
+  path: '_id',
+  reason:
+   Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+       at new ObjectID (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/bson/lib/bson/objectid.js:59:11)
+       at castObjectId (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/cast/objectid.js:25:12)
+       at ObjectId.cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schema/objectid.js:267:12)
+       at ObjectId.SchemaType.applySetters (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1031:12)
+       at ObjectId.SchemaType._castForQuery (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1459:15)
+       at ObjectId.SchemaType.castForQuery (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1449:15)
+       at ObjectId.SchemaType.castForQueryWrapper (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/schematype.js:1428:15)
+       at cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/cast.js:326:32)
+       at model.Query.Query.cast (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:4740:12)
+       at model.Query.Query._castConditions (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:1865:10)
+       at model.Query.<anonymous> (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/query.js:2122:8)
+       at model.Query._wrappedThunk [as _findOne] (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/mongoose/lib/helpers/query/wrapThunk.js:16:8)
+       at process.nextTick (/Users/blockchain/Downloads/IMCM_KAKFKA_RABBITMQ/KAFKA_HLCONSUMER/node_modules/kareem/index.js:369:33)
+       at process._tickCallback (internal/process/next_tick.js:61:11) }
+[2020-07-09T14:06:37.785] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1, error: 'unable to find query details from db' }
+[2020-07-09T14:09:01.501] [FATAL] PROCESS_KAFKA - Message::>> { topic: 'nivjain',
+  value: '{"id":"5f06b4778ded4329756d7079"}',
+  offset: 912,
+  partition: 2,
+  highWaterOffset: 913,
+  key: null,
+  timestamp: 2020-07-09T06:09:00.968Z }
+[2020-07-09T14:09:01.525] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:10:16.529] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06b4c08ded4329756d707a"}
+[2020-07-09T14:10:16.549] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:10:45.712] [FATAL] PROCESS_KAFKA - Message::>> undefined
+[2020-07-09T14:10:45.730] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:17:01.694] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06b6536bffe729ed73a8d8"}
+[2020-07-09T14:17:01.694] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06b6536bffe729ed73a8d8' }
+[2020-07-09T14:17:47.166] [FATAL] PROCESS_KAFKA - Message::>> [{"topic":"nivjain","messages":"{\"type\":\"MONGO\",\"id\":\"5f06b68823843a2bd0371fa7\"}"}]
+[2020-07-09T14:17:47.166] [FATAL] PROCESS_KAFKA - Parse:: undefined
+[2020-07-09T14:20:16.780] [FATAL] PROCESS_KAFKA - Message::>> [{"topic":"nivjain","messages":"{\"type\":\"MONGO\",\"id\":\"5f06b71923843a2bd0371fa8\"}"}]
+[2020-07-09T14:20:16.780] [FATAL] PROCESS_KAFKA - Parse:: [ { topic: 'nivjain',
+    messages: '{"type":"MONGO","id":"5f06b71923843a2bd0371fa8"}' } ] ddd undefined
+[2020-07-09T14:24:21.877] [FATAL] PROCESS_KAFKA - Message::>> [{"topic":"nivjain","messages":"{\"type\":\"MONGO\",\"id\":\"5f06b80e23843a2bd0371fa9\"}"}]
+[2020-07-09T14:24:21.877] [FATAL] PROCESS_KAFKA - Parse:: [ { topic: 'nivjain',
+    messages: '{"type":"MONGO","id":"5f06b80e23843a2bd0371fa9"}' } ] ddd undefined
+[2020-07-09T14:24:21.897] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:26:15.916] [FATAL] PROCESS_KAFKA - Message::>> "{\"id\":\"5f06b884395b2f2d6359e6f0\"}"
+[2020-07-09T14:26:15.916] [FATAL] PROCESS_KAFKA - Parse:: {"id":"5f06b884395b2f2d6359e6f0"} ddd undefined
+[2020-07-09T14:26:15.935] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:28:27.850] [FATAL] PROCESS_KAFKA - Message::>> "{\"id\":\"5f06b909259dbe2da62923c0\"}"
+[2020-07-09T14:28:27.850] [FATAL] PROCESS_KAFKA - Parse:: {"id":"5f06b909259dbe2da62923c0"} ddd undefined
+[2020-07-09T14:28:27.867] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:29:11.980] [FATAL] PROCESS_KAFKA - Message::>> "{\"id\":\"5f06b930259dbe2da62923c1\"}"
+[2020-07-09T14:29:52.000] [FATAL] PROCESS_KAFKA - Message::>> "{\"id\":\"5f06b956259dbe2da62923c2\"}"
+[2020-07-09T14:29:52.000] [FATAL] PROCESS_KAFKA - Parse:: {"id":"5f06b956259dbe2da62923c2"} ddd string
+[2020-07-09T14:29:52.018] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:30:25.441] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06b97f5c2d6c2df37072ea"}
+[2020-07-09T14:30:25.441] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06b97f5c2d6c2df37072ea' } ddd object
+[2020-07-09T14:31:32.024] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06b9c15c2d6c2df37072eb"}
+[2020-07-09T14:31:32.025] [FATAL] PROCESS_KAFKA - Parse:: {"id":"5f06b9c15c2d6c2df37072eb"} ddd string
+[2020-07-09T14:31:32.043] [ERROR] PROCESS_KAFKA - CALL_NEWS_API::>> { status: -1,
+  error: 'unable to find query details from db-mongodb' }
+[2020-07-09T14:32:07.039] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06b9dd5c2d6c2df37072ec"}
+[2020-07-09T14:32:07.039] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06b9dd5c2d6c2df37072ec' } ddd object
+[2020-07-09T14:33:53.517] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06ba515c2d6c2df37072ed"}
+[2020-07-09T14:33:53.517] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06ba515c2d6c2df37072ed' } ddd object
+[2020-07-09T14:33:58.650] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06ba565c2d6c2df37072ee"}
+[2020-07-09T14:33:58.650] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06ba565c2d6c2df37072ee' } ddd object
+[2020-07-09T14:34:02.289] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06ba5a5c2d6c2df37072ef"}
+[2020-07-09T14:34:02.290] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06ba5a5c2d6c2df37072ef' } ddd object
+[2020-07-09T15:29:09.186] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06c7455c2d6c2df37072f0"}
+[2020-07-09T15:29:09.187] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06c7455c2d6c2df37072f0' } ddd object
+[2020-07-09T15:29:16.726] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06c74c5c2d6c2df37072f1"}
+[2020-07-09T15:29:16.726] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06c74c5c2d6c2df37072f1' } ddd object
+[2020-07-09T15:29:56.384] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06c7745c2d6c2df37072f2"}
+[2020-07-09T15:29:56.384] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06c7745c2d6c2df37072f2' } ddd object
+[2020-07-09T16:44:33.028] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d8f05c2d6c2df37072f3"}
+[2020-07-09T16:44:33.028] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d8f05c2d6c2df37072f3' } ddd object
+[2020-07-09T16:44:46.765] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d8fe5c2d6c2df37072f4"}
+[2020-07-09T16:44:46.765] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d8fe5c2d6c2df37072f4' } ddd object
+[2020-07-09T16:44:50.299] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9025c2d6c2df37072f5"}
+[2020-07-09T16:44:50.299] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9025c2d6c2df37072f5' } ddd object
+[2020-07-09T16:44:52.865] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9045c2d6c2df37072f6"}
+[2020-07-09T16:44:52.865] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9045c2d6c2df37072f6' } ddd object
+[2020-07-09T16:44:53.888] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9055c2d6c2df37072f7"}
+[2020-07-09T16:44:53.888] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9055c2d6c2df37072f7' } ddd object
+[2020-07-09T16:44:55.347] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9075c2d6c2df37072f8"}
+[2020-07-09T16:44:55.347] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9075c2d6c2df37072f8' } ddd object
+[2020-07-09T16:44:56.351] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9085c2d6c2df37072f9"}
+[2020-07-09T16:44:56.351] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9085c2d6c2df37072f9' } ddd object
+[2020-07-09T16:44:56.751] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9085c2d6c2df37072fa"}
+[2020-07-09T16:44:56.751] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9085c2d6c2df37072fa' } ddd object
+[2020-07-09T16:44:56.963] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9085c2d6c2df37072fb"}
+[2020-07-09T16:44:56.963] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9085c2d6c2df37072fb' } ddd object
+[2020-07-09T16:44:57.127] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df37072fc"}
+[2020-07-09T16:44:57.127] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df37072fc' } ddd object
+[2020-07-09T16:44:57.294] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df37072fd"}
+[2020-07-09T16:44:57.294] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df37072fd' } ddd object
+[2020-07-09T16:44:57.453] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df37072fe"}
+[2020-07-09T16:44:57.454] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df37072fe' } ddd object
+[2020-07-09T16:44:57.616] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df37072ff"}
+[2020-07-09T16:44:57.617] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df37072ff' } ddd object
+[2020-07-09T16:44:57.736] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df3707300"}
+[2020-07-09T16:44:57.736] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df3707300' } ddd object
+[2020-07-09T16:44:57.894] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df3707301"}
+[2020-07-09T16:44:57.894] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df3707301' } ddd object
+[2020-07-09T16:44:58.044] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9095c2d6c2df3707302"}
+[2020-07-09T16:44:58.044] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9095c2d6c2df3707302' } ddd object
+[2020-07-09T16:44:58.193] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707303"}
+[2020-07-09T16:44:58.193] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707303' } ddd object
+[2020-07-09T16:44:58.343] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707304"}
+[2020-07-09T16:44:58.343] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707304' } ddd object
+[2020-07-09T16:44:58.497] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707305"}
+[2020-07-09T16:44:58.497] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707305' } ddd object
+[2020-07-09T16:44:58.652] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707306"}
+[2020-07-09T16:44:58.652] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707306' } ddd object
+[2020-07-09T16:44:58.804] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707307"}
+[2020-07-09T16:44:58.804] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707307' } ddd object
+[2020-07-09T16:44:58.952] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90a5c2d6c2df3707308"}
+[2020-07-09T16:44:58.952] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90a5c2d6c2df3707308' } ddd object
+[2020-07-09T16:44:59.117] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df3707309"}
+[2020-07-09T16:44:59.117] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df3707309' } ddd object
+[2020-07-09T16:44:59.261] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df370730a"}
+[2020-07-09T16:44:59.262] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df370730a' } ddd object
+[2020-07-09T16:44:59.556] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df370730b"}
+[2020-07-09T16:44:59.556] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df370730b' } ddd object
+[2020-07-09T16:44:59.705] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df370730c"}
+[2020-07-09T16:44:59.705] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df370730c' } ddd object
+[2020-07-09T16:44:59.878] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df370730d"}
+[2020-07-09T16:44:59.878] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df370730d' } ddd object
+[2020-07-09T16:45:00.025] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90b5c2d6c2df370730e"}
+[2020-07-09T16:45:00.025] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90b5c2d6c2df370730e' } ddd object
+[2020-07-09T16:45:00.185] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df370730f"}
+[2020-07-09T16:45:00.185] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df370730f' } ddd object
+[2020-07-09T16:45:00.342] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707310"}
+[2020-07-09T16:45:00.342] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707310' } ddd object
+[2020-07-09T16:45:00.481] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707311"}
+[2020-07-09T16:45:00.482] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707311' } ddd object
+[2020-07-09T16:45:00.596] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707312"}
+[2020-07-09T16:45:00.597] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707312' } ddd object
+[2020-07-09T16:45:00.788] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707313"}
+[2020-07-09T16:45:00.788] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707313' } ddd object
+[2020-07-09T16:45:00.969] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707314"}
+[2020-07-09T16:45:00.969] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707314' } ddd object
+[2020-07-09T16:45:01.099] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d90c5c2d6c2df3707315"}
+[2020-07-09T16:45:01.099] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d90c5c2d6c2df3707315' } ddd object
+[2020-07-09T16:47:55.743] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9bb5c2d6c2df3707316"}
+[2020-07-09T16:47:55.744] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9bb5c2d6c2df3707316' } ddd object
+[2020-07-09T16:47:56.592] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9bc5c2d6c2df3707317"}
+[2020-07-09T16:47:56.592] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9bc5c2d6c2df3707317' } ddd object
+[2020-07-09T16:48:02.932] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9c25c2d6c2df3707318"}
+[2020-07-09T16:48:02.932] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9c25c2d6c2df3707318' } ddd object
+[2020-07-09T16:48:03.700] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9c35c2d6c2df3707319"}
+[2020-07-09T16:48:03.701] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9c35c2d6c2df3707319' } ddd object
+[2020-07-09T16:48:04.301] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9c45c2d6c2df370731a"}
+[2020-07-09T16:48:04.301] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9c45c2d6c2df370731a' } ddd object
+[2020-07-09T16:48:04.748] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f06d9c45c2d6c2df370731b"}
+[2020-07-09T16:48:04.748] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f06d9c45c2d6c2df370731b' } ddd object
+[2020-07-16T16:00:53.929] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f100933d4a3d47e199210b3"}
+[2020-07-16T16:00:53.930] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f100933d4a3d47e199210b3' } ddd object
+[2020-07-16T16:27:24.639] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f100f6ae3ebc70ef55ca15f"}
+[2020-07-16T16:27:24.640] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f100f6ae3ebc70ef55ca15f' } ddd object
+[2020-07-16T16:30:07.917] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10100d51366e0ef6bd5931"}
+[2020-07-16T16:30:07.917] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10100d51366e0ef6bd5931' } ddd object
+[2020-07-16T16:31:36.830] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f101068e3ebc70ef55ca160"}
+[2020-07-16T16:31:36.833] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f101068e3ebc70ef55ca160' } ddd object
+[2020-07-16T16:31:37.466] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106951366e0ef6bd5932"}
+[2020-07-16T16:31:37.466] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106951366e0ef6bd5932' } ddd object
+[2020-07-16T16:31:38.133] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106918739d0f19e39a1f"}
+[2020-07-16T16:31:38.133] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106918739d0f19e39a1f' } ddd object
+[2020-07-16T16:31:38.487] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106ae3ebc70ef55ca161"}
+[2020-07-16T16:31:38.490] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106ae3ebc70ef55ca161' } ddd object
+[2020-07-16T16:31:38.566] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106818739d0f19e39a1e"}
+[2020-07-16T16:31:38.567] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106818739d0f19e39a1e' } ddd object
+[2020-07-16T16:31:38.797] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106a64a5f70f03f86714"}
+[2020-07-16T16:31:38.797] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106a64a5f70f03f86714' } ddd object
+[2020-07-16T16:31:39.129] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106a51366e0ef6bd5933"}
+[2020-07-16T16:31:39.130] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106a51366e0ef6bd5933' } ddd object
+[2020-07-16T16:31:39.147] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106864a5f70f03f86713"}
+[2020-07-16T16:31:39.147] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106864a5f70f03f86713' } ddd object
+[2020-07-16T16:31:39.468] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106b3a70720f09627fb4"}
+[2020-07-16T16:31:39.469] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106b3a70720f09627fb4' } ddd object
+[2020-07-16T16:31:39.795] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106b18739d0f19e39a20"}
+[2020-07-16T16:31:39.795] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106b18739d0f19e39a20' } ddd object
+[2020-07-16T16:31:39.805] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f1010693a70720f09627fb3"}
+[2020-07-16T16:31:39.805] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f1010693a70720f09627fb3' } ddd object
+[2020-07-16T16:31:40.137] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106be3ebc70ef55ca162"}
+[2020-07-16T16:31:40.141] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106be3ebc70ef55ca162' } ddd object
+[2020-07-16T16:31:40.464] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106c64a5f70f03f86715"}
+[2020-07-16T16:31:40.464] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106c64a5f70f03f86715' } ddd object
+[2020-07-16T16:31:40.794] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106c51366e0ef6bd5934"}
+[2020-07-16T16:31:40.795] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106c51366e0ef6bd5934' } ddd object
+[2020-07-16T16:31:41.129] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106c3a70720f09627fb5"}
+[2020-07-16T16:31:41.130] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106c3a70720f09627fb5' } ddd object
+[2020-07-16T16:31:41.455] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106d18739d0f19e39a21"}
+[2020-07-16T16:31:41.456] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106d18739d0f19e39a21' } ddd object
+[2020-07-16T16:31:41.797] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106de3ebc70ef55ca163"}
+[2020-07-16T16:31:41.800] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106de3ebc70ef55ca163' } ddd object
+[2020-07-16T16:31:42.123] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106d64a5f70f03f86716"}
+[2020-07-16T16:31:42.123] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106d64a5f70f03f86716' } ddd object
+[2020-07-16T16:31:42.459] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106e51366e0ef6bd5935"}
+[2020-07-16T16:31:42.459] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106e51366e0ef6bd5935' } ddd object
+[2020-07-16T16:31:42.793] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106e3a70720f09627fb6"}
+[2020-07-16T16:31:42.794] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106e3a70720f09627fb6' } ddd object
+[2020-07-16T16:31:43.126] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106e18739d0f19e39a22"}
+[2020-07-16T16:31:43.127] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106e18739d0f19e39a22' } ddd object
+[2020-07-16T16:31:43.453] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106fe3ebc70ef55ca164"}
+[2020-07-16T16:31:43.453] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106fe3ebc70ef55ca164' } ddd object
+[2020-07-16T16:31:43.785] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106f64a5f70f03f86717"}
+[2020-07-16T16:31:43.786] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106f64a5f70f03f86717' } ddd object
+[2020-07-16T16:31:44.119] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10106f51366e0ef6bd5936"}
+[2020-07-16T16:31:44.119] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10106f51366e0ef6bd5936' } ddd object
+[2020-07-16T16:31:44.469] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f1010703a70720f09627fb7"}
+[2020-07-16T16:31:44.469] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f1010703a70720f09627fb7' } ddd object
+[2020-07-16T16:31:44.799] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10107018739d0f19e39a23"}
+[2020-07-16T16:31:44.800] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10107018739d0f19e39a23' } ddd object
+[2020-07-16T16:31:45.120] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f101070e3ebc70ef55ca165"}
+[2020-07-16T16:31:45.121] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f101070e3ebc70ef55ca165' } ddd object
+[2020-07-16T16:31:45.455] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10107164a5f70f03f86718"}
+[2020-07-16T16:31:45.455] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10107164a5f70f03f86718' } ddd object
+[2020-07-16T16:31:45.786] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10107151366e0ef6bd5937"}
+[2020-07-16T16:31:45.786] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10107151366e0ef6bd5937' } ddd object
+[2020-07-16T16:31:46.119] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f1010713a70720f09627fb8"}
+[2020-07-16T16:31:46.120] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f1010713a70720f09627fb8' } ddd object
+[2020-07-16T19:53:01.770] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f103f9be8cbab23832e8d49"}
+[2020-07-16T19:53:01.773] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f103f9be8cbab23832e8d49' } ddd object
+[2020-07-16T20:02:43.045] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f1041e0e1fa9323a34a330c"}
+[2020-07-16T20:02:43.046] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f1041e0e1fa9323a34a330c' } ddd object
+[2020-07-16T20:04:12.244] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423ce8cbab23832e8d4a"}
+[2020-07-16T20:04:12.245] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423ce8cbab23832e8d4a' } ddd object
+[2020-07-16T20:04:12.390] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423ce1fa9323a34a330d"}
+[2020-07-16T20:04:12.390] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423ce1fa9323a34a330d' } ddd object
+[2020-07-16T20:04:12.561] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423c116bae239109e682"}
+[2020-07-16T20:04:12.562] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423c116bae239109e682' } ddd object
+[2020-07-16T20:04:12.893] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423c464a9023c97b4228"}
+[2020-07-16T20:04:12.894] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423c464a9023c97b4228' } ddd object
+[2020-07-16T20:04:13.056] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423de8cbab23832e8d4b"}
+[2020-07-16T20:04:13.057] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423de8cbab23832e8d4b' } ddd object
+[2020-07-16T20:04:13.227] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423de1fa9323a34a330e"}
+[2020-07-16T20:04:13.227] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423de1fa9323a34a330e' } ddd object
+[2020-07-16T20:04:13.391] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423d116bae239109e683"}
+[2020-07-16T20:04:13.391] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423d116bae239109e683' } ddd object
+[2020-07-16T20:04:13.561] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423d68ef0923b3df6955"}
+[2020-07-16T20:04:13.562] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423d68ef0923b3df6955' } ddd object
+[2020-07-16T20:04:13.723] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423d464a9023c97b4229"}
+[2020-07-16T20:04:13.724] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423d464a9023c97b4229' } ddd object
+[2020-07-16T20:04:13.889] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423de8cbab23832e8d4c"}
+[2020-07-16T20:04:13.891] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423de8cbab23832e8d4c' } ddd object
+[2020-07-16T20:04:13.949] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423b116bae239109e681"}
+[2020-07-16T20:04:13.949] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423b116bae239109e681' } ddd object
+[2020-07-16T20:04:14.060] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423ee1fa9323a34a330f"}
+[2020-07-16T20:04:14.060] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423ee1fa9323a34a330f' } ddd object
+[2020-07-16T20:04:14.102] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423c464a9023c97b4227"}
+[2020-07-16T20:04:14.102] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423c464a9023c97b4227' } ddd object
+[2020-07-16T20:04:14.228] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423e116bae239109e684"}
+[2020-07-16T20:04:14.228] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423e116bae239109e684' } ddd object
+[2020-07-16T20:04:14.391] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423e68ef0923b3df6956"}
+[2020-07-16T20:04:14.392] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423e68ef0923b3df6956' } ddd object
+[2020-07-16T20:04:14.558] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423e464a9023c97b422a"}
+[2020-07-16T20:04:14.558] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423e464a9023c97b422a' } ddd object
+[2020-07-16T20:04:14.726] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423c68ef0923b3df6954"}
+[2020-07-16T20:04:14.726] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423c68ef0923b3df6954' } ddd object
+[2020-07-16T20:04:14.727] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423ee8cbab23832e8d4d"}
+[2020-07-16T20:04:14.729] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423ee8cbab23832e8d4d' } ddd object
+[2020-07-16T20:04:14.894] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423ee1fa9323a34a3310"}
+[2020-07-16T20:04:14.894] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423ee1fa9323a34a3310' } ddd object
+[2020-07-16T20:04:15.060] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423f116bae239109e685"}
+[2020-07-16T20:04:15.060] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423f116bae239109e685' } ddd object
+[2020-07-16T20:04:15.228] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423f68ef0923b3df6957"}
+[2020-07-16T20:04:15.228] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423f68ef0923b3df6957' } ddd object
+[2020-07-16T20:04:15.391] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423f464a9023c97b422b"}
+[2020-07-16T20:04:15.391] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423f464a9023c97b422b' } ddd object
+[2020-07-16T20:04:15.559] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423fe8cbab23832e8d4e"}
+[2020-07-16T20:04:15.559] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423fe8cbab23832e8d4e' } ddd object
+[2020-07-16T20:04:15.729] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423fe1fa9323a34a3311"}
+[2020-07-16T20:04:15.729] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423fe1fa9323a34a3311' } ddd object
+[2020-07-16T20:04:15.892] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10423f116bae239109e686"}
+[2020-07-16T20:04:15.892] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10423f116bae239109e686' } ddd object
+[2020-07-16T20:04:16.057] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f10424068ef0923b3df6958"}
+[2020-07-16T20:04:16.057] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f10424068ef0923b3df6958' } ddd object
+[2020-07-16T20:04:16.241] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f104240464a9023c97b422c"}
+[2020-07-16T20:04:16.241] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f104240464a9023c97b422c' } ddd object
+[2020-07-16T20:04:16.398] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f104240e8cbab23832e8d4f"}
+[2020-07-16T20:04:16.400] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f104240e8cbab23832e8d4f' } ddd object
+[2020-07-16T20:04:16.576] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f104240e1fa9323a34a3312"}
+[2020-07-16T20:04:16.580] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f104240e1fa9323a34a3312' } ddd object
+[2020-07-16T20:04:16.731] [FATAL] PROCESS_KAFKA - Message::>> {"id":"5f104240116bae239109e687"}
+[2020-07-16T20:04:16.735] [FATAL] PROCESS_KAFKA - Parse:: { id: '5f104240116bae239109e687' } ddd object

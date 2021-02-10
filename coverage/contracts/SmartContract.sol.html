@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/SmartContract.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> SmartContract.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity &gt;=0.4.21 &lt;0.7.0;
+// pragma experimental ABIEncoderV2;
+pragma experimental ABIEncoderV2;
+&nbsp;
+contract SmartContract {
+    struct CompanyDetails {
+        bytes32 cName;
+        bytes32 cEmail;
+        string pdf_filename;
+        bytes32 pdf_filename_bytes;
+        bytes32 date;
+        bytes32 pdf_hash;
+    }
+    bytes32 public fooStore;
+    bytes32[] public EMAIL_LIST;
+    struct pdfvalidationList {
+        bytes32[] CompanyDetails;
+    }
+    struct User {
+        //jain@gmail.com
+        bytes32 uEmail;
+        // namejain
+        bytes32 uName; 
+        // mapping(bytes32 =&gt; pdfvalidationList) pdfMapping;
+        // mapping('pdf_filename' =&gt; [{jarvis,jarvis@gmail.com,pdf_filename,'dateunix'}])
+        // mapping(bytes32 =&gt; pdfvalidationList) pdfMapping;
+        // mapping(bytes32 =&gt; CompanyDetails[]) pdfMapping;
+        // mapping(bytes32 =pdf_hash =&gt; CompanyDetails[]) pdfMapping;
+        mapping(bytes32 =&gt; CompanyDetails) pdfMapping;
+        string [] pdf_list;
+        bytes32 [] pdf_list_bytes;
+        bytes32 [] pdf_hashes;
+    }
+    mapping (bytes32 =&gt; User) public usersMap;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function checkUserExistEmail(bytes32 _email) public view returns(bool success){</span>
+<span class="cstat-no" title="statement not covered" >        if (keccak256(abi.encodePacked(usersMap[_email].uEmail)) == keccak256(abi.encodePacked(_email))) {</span>
+<span class="cstat-no" title="statement not covered" >            return (true);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return (false) ;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function verifyPdfHash(bytes32 _email, bytes32 _pdf_hash) public view returns(bool success){</span>
+<span class="cstat-no" title="statement not covered" >        if (keccak256(abi.encodePacked(usersMap[_email].pdfMapping[_pdf_hash].pdf_hash)) == keccak256(abi.encodePacked(_pdf_hash))) {</span>
+<span class="cstat-no" title="statement not covered" >            return (true);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return (false) ;</span>
+    }
+<span class="fstat-no" title="function not covered" >    function register(bytes32 _email, bytes32 _name) public  returns (bool exists) {</span>
+<span class="cstat-no" title="statement not covered" >        if (keccak256(abi.encodePacked(usersMap[_email].uEmail)) == keccak256(abi.encodePacked(_email))) {</span>
+        //    return (false);
+<span class="cstat-no" title="statement not covered" >           revert()</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].uEmail = _email</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].uName = _name</span>;
+<span class="cstat-no" title="statement not covered" >        EMAIL_LIST.push(_email)</span>;
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getInfo(bytes32 _email) public view returns (bytes32, bytes32){</span>
+<span class="cstat-no" title="statement not covered" >        return (usersMap[_email].uEmail, usersMap[_email].uName);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >     function addPdfTxn(bytes32 _email, bytes32 _cname, bytes32 _cemail,string memory _pdf_filename,bytes32 _pdf_filename_bytes,bytes32 _pdf_hash, bytes32 _date) public returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        if (keccak256(abi.encodePacked(usersMap[_email].uEmail)) != keccak256(abi.encodePacked(_email))) {</span>
+        //    return 0;
+<span class="cstat-no" title="statement not covered" >           revert()</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        if (keccak256(abi.encodePacked(usersMap[_email].pdfMapping[_pdf_hash].pdf_hash)) == keccak256(abi.encodePacked(_pdf_hash))) {</span>
+<span class="cstat-no" title="statement not covered" >            revert()</span>;
+        }
+        // usersMap[_email].pdfMapping[_pdf_filename].push(CompanyDetails(_cname,_cemail,_pdf_filename,_date));
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdfMapping[_pdf_hash].cName = _cname</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdfMapping[_pdf_hash].cEmail = _cemail</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdfMapping[_pdf_hash].pdf_filename = _pdf_filename</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdfMapping[_pdf_hash].date = _date</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdfMapping[_pdf_hash].pdf_hash = _pdf_hash</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdf_list.push(_pdf_filename)</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdf_hashes.push(_pdf_hash)</span>;
+<span class="cstat-no" title="statement not covered" >        usersMap[_email].pdf_list_bytes.push(_pdf_filename_bytes)</span>;
+<span class="cstat-no" title="statement not covered" >        return 1;</span>
+    }
+<span class="fstat-no" title="function not covered" >    function getPDFList(bytes32 _email) public view returns(string[] memory){</span>
+<span class="cstat-no" title="statement not covered" >        return (usersMap[_email].pdf_list);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getPDFListBytes(bytes32 _email) public view returns(bytes32 [] memory){</span>
+<span class="cstat-no" title="statement not covered" >        return (usersMap[_email].pdf_list_bytes);</span>
+    }
+    
+<span class="fstat-no" title="function not covered" >    function getPdfHashes(bytes32 _email) public view returns(bytes32 [] memory){</span>
+<span class="cstat-no" title="statement not covered" >        return (usersMap[_email].pdf_hashes);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCompanyDetails(bytes32 _email, bytes32 _pdf_hash ) public view returns(bytes32,bytes32,string memory,bytes32,bytes32,bytes32){</span>
+<span class="cstat-no" title="statement not covered" >        return(</span>
+            usersMap[_email].pdfMapping[_pdf_hash].cName,
+            usersMap[_email].pdfMapping[_pdf_hash].cEmail,
+            usersMap[_email].pdfMapping[_pdf_hash].pdf_filename,
+            usersMap[_email].pdfMapping[_pdf_hash].pdf_filename_bytes,
+            usersMap[_email].pdfMapping[_pdf_hash].date,
+            usersMap[_email].pdfMapping[_pdf_hash].pdf_hash);
+    }
+    // event logFoo(bytes32 foo);
+<span class="fstat-no" title="function not covered" >    function sendFoo(bytes32 foo) public {</span>
+<span class="cstat-no" title="statement not covered" >        fooStore= foo</span>;
+        // logFoo(foo);
+    }
+<span class="fstat-no" title="function not covered" >    function getFoo() public view returns(bytes32) {</span>
+<span class="cstat-no" title="statement not covered" >        return(fooStore);</span>
+    }
+}
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    // function getCompany(bytes32 date) public view returns(bytes32[], uint256[], uint256[], bytes32[], bytes32[]){
+    //     bytes32[] memory emailids = new bytes32[](length);
+    //     bytes32[] memory company = new bytes32[](length);
+    //     for(uint i=0; i&lt;EMAIL_LIST.length; i++){
+    //         // Namecards memory questionStructs;
+    //         nama[i] = questionStructs[addressList[i]].name;
+    //         netsize[i] = questionStructs[addressList[i]].contactList[date].emailArray.length;
+    //         totaltokens[i] = balanceOf(questionStructs[addressList[i]].ethaddress);
+    //         emailids[i] = questionStructs[addressList[i]].emailid;
+    //         company[i] = questionStructs[addressList[i]].companyname;
+    //     }
+    //     return(nama,netsize,totaltokens, emailids, company);
+    // }
+    // function getPdfTxn(bytes32 _email, bytes32 _cemail) public returns (bytes32[]) {
+    //     if (keccak256(abi.encodePacked(usersMap[_email].uEmail)) != keccak256(abi.encodePacked(_email))) {revert();}
+    //     return (usersMap[_email].pdfMapping[_cemail].CompanyDetails);
+    // }
+&nbsp;
+    //    function getPdfList(bytes32 _email, bytes32 _cemail) public view returns(bytes32[] memory){
+    //     return (usersMap[_email].pdfMapping[_cemail].CompanyDetails);
+    // }
+&nbsp;
+    // function addPdfTxn(bytes32 _email, bytes32 _cname, bytes32 _cemail,bytes32 _pdf_filename, bytes32 _date) public returns (uint256) {
+    //     if (keccak256(abi.encodePacked(usersMap[_email].uEmail)) != keccak256(abi.encodePacked(_email))) {
+    //        return 0;
+    //     }
+    //     // usersMap[_email].pdfMapping[_cemail].cEmail = _cemail;
+    //     usersMap[_email].pdfMapping[_cemail].push(CompanyDetails(_cname,_cemail,_pdf_filename,_date));
+    //     return 1;
+    // }
+&nbsp;
+&nbsp;
+&nbsp;
+// pragma solidity 0.5.1;
+&nbsp;
+// contract Certificates {
+&nbsp;
+//     struct Cert {
+//         address recipient;
+//         bool confirmed;
+//     }
+&nbsp;
+//     mapping(bytes32 =&gt; Cert) public certs;
+//     bytes32[] public certList;
+&nbsp;
+//     event LogNewCert(address sender, bytes32 cert, address recipient);
+//     event LogConfirmed(address sender, bytes32 cert);
+&nbsp;
+//     function isCert(bytes32 cert) public view returns(bool isIndeed) {
+//         if(cert == 0) return false;
+//         return certs[cert].recipient != address(0);
+//     }
+&nbsp;
+//     function createCert(bytes32 cert, address recipient) public {
+//         require(recipient != address(0));
+//         require(!isCert(cert));
+//         Cert storage c = certs[cert];
+//         c.recipient = recipient;
+//         certList.push(cert);
+//         emit LogNewCert(msg.sender, cert, recipient);
+//     }
+&nbsp;
+//     function confirmCert(bytes32 cert) public {
+//         require(certs[cert].recipient == msg.sender);
+//         require(certs[cert].confirmed == false);
+//         certs[cert].confirmed = true;
+//         emit LogConfirmed(msg.sender, cert);
+//     }
+&nbsp;
+//     function isUserCert(bytes32 cert, address user) public view returns(bool) {
+//         if(!isCert(cert)) return false;
+//         if(certs[cert].recipient != user) return false;
+//         return certs[cert].confirmed;
+//     }
+// }</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Feb 04 2021 07:14:48 GMT+0800 (Singapore Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

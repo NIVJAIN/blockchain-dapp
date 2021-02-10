@@ -1,0 +1,1 @@
+mongo -u "root" -p "$iloveblockchain" --authenticationDatabase  "admin"

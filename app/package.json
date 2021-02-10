@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "prettier": "prettier --write **/*.sol"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.5",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.3",
+    "solidity-coverage": "^0.7.14",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.2.4"
+  }
+}

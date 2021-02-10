@@ -1,0 +1,66 @@
+@baseUrl=http://localhost:5000
+@cloudUrl=http://lufthansadsl.tk/dsl/
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNyaXBhbC5qYWluQGdtYWlsLmNvbSIsIm9yZ2lkIjoiSU1EQSIsImlhdCI6MTU4ODEzOTYyNCwiZXhwIjoxNTkxNzM2MDI0fQ.xT326NsKqlvEM5MjmDrTXuxxYsm42gBXS3tgwbc5F0k
+
+###
+POST {{baseUrl}}/user/adminsignup
+content-type: application/json
+
+{
+	"email": "sripal.jain@gmail.com",
+	"password": "sripaljain",
+	"password2": "sripaljain",
+	"orgid": "IMDA"
+}
+
+###
+POST {{baseUrl}}/user/adminlogin
+content-type: application/json
+
+{
+	"email": "sripal.jain@gmail.com",
+	"password": "sripaljain",
+	"orgid": "IMDA"
+}
+###
+
+POST {{baseUrl}}/user/signup
+content-type: application/json
+
+{
+	"email": "sripal.jain@gmail.com",
+	"password": "sripaljain",
+	"password2": "sripaljain",
+	"orgid": "IMDA"
+}
+
+###
+# @name login
+POST {{baseUrl}}/user/login
+content-type: application/json
+
+{
+	"email": "sripal.jain@gmail.com",
+	"password": "sripaljain",
+	"orgid": "IMDA"
+}
+
+###
+@authToken = {{login.response.body.token}}
+@refreshToken = {{login.response.body.refreshToken}}
+###
+
+GET {{baseUrl}}/upload
+content-type: application/json
+Authorization: Bearer {{authToken}}
+###
+
+###
+POST {{baseUrl}}/user/cookielogin
+content-type: application/json
+
+{
+	"email": "sripal.jain@gmail.com",
+	"password": "sripaljain",
+	"orgid": "IMDA"
+}
