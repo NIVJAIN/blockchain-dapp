@@ -3,5 +3,7 @@ build
 uploaded
 uploads
 uploads2
-contracts/SmartContract.sol
-contracts/SmartContractsol
+# contracts/SmartContract.sol
+# contracts/SmartContractsol
+.gitignore
+.git
