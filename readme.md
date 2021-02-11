@@ -7,10 +7,11 @@
 
 ## Pre requisite
 ```
+0. Install Ganache 
 1. Kafka docker-compose cluster must be running
 2. Mongodb local installation or Atlas or AWS DocDB. 
 3. MongoDB, change the connection string in database folder.
-4. Create token collection TTL, this is for auto deletion of document in mongodb for refresh tokens follow below steps
+4. Create token collection TTL, this is for auto deletion of document in mongodb for refresh tokens, follow below steps
 
 
 # create index on tokens collections 
