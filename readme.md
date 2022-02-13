@@ -15,21 +15,22 @@ ganache-cli: 7545
 
 ## Pre requisite
 ```
-0. Install Ganache and run on port 7545
-npm install -g ganache-cli
-ganache-cli -p 7545
-# kafka installation and run on port 9092
-git clone https://github.com/NIVJAIN/kafka-stack-docker-compose.git
-cd kafka-stack-docker-compose
-docker-compose -f zk-single-kafka-multiple.yml up
-#docker-compose -f zk-single-kafka-multiple.yml down
-1. Kafka docker-compose cluster must be running
+1. Install Ganache and run on port 7545
+2. npm install -g ganache-cli
+3. ganache-cli -p 7545
+4. Kafka installation and running on port 9092 and 2181
+5. git clone https://github.com/NIVJAIN/kafka-stack-docker-compose.git
+6. cd kafka-stack-docker-compose
+7. docker-compose -f zk-single-kafka-multiple.yml up
+8. docker-compose -f zk-single-kafka-multiple.yml down
+9. Kafka docker-compose cluster must be running
+```
 λ  kafka-stack-docker-compose git:(master) ✗ docker-compose -f zk-single-kafka-multiple.yml ps
 NAME                COMMAND                  SERVICE             STATUS              PORTS
 kafka1              "/etc/confluent/dock…"   kafka1              running             0.0.0.0:9092->9092/tcp
 kafka2              "/etc/confluent/dock…"   kafka2              running             0.0.0.0:9093->9093/tcp
 zoo1                "/etc/confluent/dock…"   zoo1                running             0.0.0.0:2181->2181/tcp
-
+```
 2. Mongodb local installation or Atlas or AWS DocDB. 
 docker run -p 27017:27017 -d mongo:latest
 3. MongoDB, change the connection string in database folder.
