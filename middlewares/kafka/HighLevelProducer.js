@@ -44,6 +44,7 @@ BaseModel.prototype.setConnectoConnection = function (topic, pload, isBatchProdu
   var HighLevelProducer = kafka.HighLevelProducer;
   if(isBatchProducer) {
     var client = new kafka.KafkaClient('127.0.0.1:2181', 'producer-node',
+    // var client = new kafka.KafkaClient('127.0.0.1:9092', 'producer-node',
       {}, {
         noAckBatchSize: 5000000, //5 MB
         noAckBatchAge: 5000 // 5 Sec
@@ -57,7 +58,7 @@ BaseModel.prototype.setConnectoConnection = function (topic, pload, isBatchProdu
   }
 
   producer.on('error', function (err) {
-    console.log('error', err);
+    console.log('Kafka HighLevel Producer error', err);
   });
 
   return producer;

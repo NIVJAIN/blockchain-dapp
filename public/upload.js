@@ -24,6 +24,9 @@ var arrayData = [
   transactionIndex: 0
 },
 ]
+
+const backend_url = "http://localhost:9000"
+
 const App = {
   BlockchainRegistration : async function(e){
       e.preventDefault();
@@ -52,7 +55,9 @@ const App = {
               return false;
           }
           console.log(_pdf_file)
-          let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file)
+          // let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file)
+          let f_upload = await App.file_upload(`${backend_url}/upload-profile-pic`, "POST", profile_file)
+
           console.log(f_upload)
           let reqBody = JSON.stringify({
               email: 'niv.jain@gmail.com',
@@ -60,7 +65,8 @@ const App = {
               companyemail: _companyemail,
               pdf_filename: f_upload
           }); 
-          let urlAxios = 'http://localhost:5000/blockchain/pdf'
+          // let urlAxios = 'http://localhost:9000/blockchain/pdf'
+          let urlAxios = `${backend_url}/blockchain/pdf`
           let methodType = 'POST'
           let response = await App.axios_request(urlAxios,methodType,reqBody)
           console.log("response",response)  
@@ -120,12 +126,14 @@ const App = {
                 $('.tabBody').find('tbody').append(state);
           }
           // <a href="resume.pdf">click here todownload the PDF file.</a>
+          // + `<a target="_blank" rel="noopener noreferrer"  href="http://localhost:9000/${pdf_filename}">${pdf_filename}</a>`
+
           var pdf_href = '<tr><td text-align=left">' 
                 +  (i+1) + ". " 
                 + '</td><td text-align=left">' 
                 + "pdf_link"
                 + '</td><td text-align=left"> ' 
-                + `<a target="_blank" rel="noopener noreferrer"  href="http://localhost:5000/${pdf_filename}">${pdf_filename}</a>`
+                + `<a target="_blank" rel="noopener noreferrer"  href="${backend_url}/${pdf_filename}">${pdf_filename}</a>`
                 + '</td></tr>';
           $('.tabBody').find('tbody').append(pdf_href);
         resolve(true)
@@ -216,7 +224,7 @@ window.App = App;
 //             companyemail: 'applewatch@gmail.com',
 //             pdf_filename: 'apple.pdf'
 //         });
-//         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+//         let urlAxios = 'http://localhost:9000/blockchain/pdf'
 //         let methodType = 'POST'
 //         let response = await App.axios_request(urlAxios,methodType,reqBody)
 //         console.log(response)
@@ -282,7 +290,7 @@ window.addEventListener("load", function() {
 //                 return false;
 //             }
 //             console.log(_pdf_file)
-//             let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file)
+//             let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file)
 //             console.log(f_upload)
 //             let reqBody = JSON.stringify({
 //                 email: 'niv.jain@gmail.com',
@@ -290,7 +298,7 @@ window.addEventListener("load", function() {
 //                 companyemail: _companyemail,
 //                 pdf_filename: f_upload
 //             }); 
-//             let urlAxios = 'http://localhost:5000/blockchain/pdf'
+//             let urlAxios = 'http://localhost:9000/blockchain/pdf'
 //             let methodType = 'POST'
 //             let response = await App.axios_request(urlAxios,methodType,reqBody)
 //             console.log("response",response)  
@@ -425,7 +433,7 @@ window.addEventListener("load", function() {
 // //             companyemail: 'applewatch@gmail.com',
 // //             pdf_filename: 'apple.pdf'
 // //         });
-// //         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+// //         let urlAxios = 'http://localhost:9000/blockchain/pdf'
 // //         let methodType = 'POST'
 // //         let response = await App.axios_request(urlAxios,methodType,reqBody)
 // //         console.log(response)
@@ -511,7 +519,7 @@ window.addEventListener("load", function() {
 //     try {
 //         const options = {
 //             method: 'POST',
-//             url: 'http://localhost:5000/blockchain/pdf',
+//             url: 'http://localhost:9000/blockchain/pdf',
 //             // headers: {'user-agent': 'vscode-restclient', 'content-type': 'application/json'},
 //             headers: { 'content-type': 'application/json'},
 //             data: {

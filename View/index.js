@@ -52,7 +52,7 @@
                 return false;
             }
             console.log(_pdf_file)
-            let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file)
+            let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file)
             console.log(f_upload)
             let reqBody = JSON.stringify({
                 email: 'niv.jain@gmail.com',
@@ -60,7 +60,7 @@
                 companyemail: _companyemail,
                 pdf_filename: f_upload
             }); 
-            let urlAxios = 'http://localhost:5000/blockchain/pdf'
+            let urlAxios = 'http://localhost:9000/blockchain/pdf'
             let methodType = 'POST'
             let response = await App.axios_request(urlAxios,methodType,reqBody)
             console.log("response",response)  
@@ -195,7 +195,7 @@ window.App = App;
 //             companyemail: 'applewatch@gmail.com',
 //             pdf_filename: 'apple.pdf'
 //         });
-//         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+//         let urlAxios = 'http://localhost:9000/blockchain/pdf'
 //         let methodType = 'POST'
 //         let response = await App.axios_request(urlAxios,methodType,reqBody)
 //         console.log(response)
@@ -281,7 +281,7 @@ window.addEventListener("load", function() {
 //     try {
 //         const options = {
 //             method: 'POST',
-//             url: 'http://localhost:5000/blockchain/pdf',
+//             url: 'http://localhost:9000/blockchain/pdf',
 //             // headers: {'user-agent': 'vscode-restclient', 'content-type': 'application/json'},
 //             headers: { 'content-type': 'application/json'},
 //             data: {

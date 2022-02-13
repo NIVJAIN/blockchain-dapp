@@ -22,7 +22,7 @@
               password: _passowrd
           }); 
           console.log("reqBody", reqBody)
-          let urlAxios = 'http://localhost:5000/user/cookielogin'
+          let urlAxios = 'http://localhost:9000/user/cookielogin'
           let methodType = 'POST'
           let token = "";
           let response = await App.axios_request(urlAxios,methodType,reqBody)
@@ -30,10 +30,10 @@
           console.log("cookietoken")
           window.localStorage.setItem("email",_email ) 
           // console.log("GetToken", token)
-          window.location = "http://localhost:5000/upload"
+          window.location = "http://localhost:9000/upload"
           // if(redirectResponse) {
           //     // console.log(redirectResponse)
-          //     window.location = "http://localhost:5000/upload"  + `?token=${token}`;
+          //     window.location = "http://localhost:9000/upload"  + `?token=${token}`;
           // }
       } catch (error) {
           console.log(error)
@@ -63,19 +63,19 @@
                 password: _passowrd
             }); 
             console.log("reqBody", reqBody)
-            let urlAxios = 'http://localhost:5000/user/login'
+            let urlAxios = 'http://localhost:9000/user/login'
             let methodType = 'POST'
             let token = "";
             let response = await App.axios_request(urlAxios,methodType,reqBody)
             console.log("response",response)  
             window.localStorage.setItem("token", response.token) 
             window.localStorage.setItem("refreshToken", response.refreshToken)  
-            let redirectUrl = 'http://localhost:5000/upload'
+            let redirectUrl = 'http://localhost:9000/upload'
             token = window.localStorage.getItem("token")
             console.log("GetToken", token)
             // let redirectResponse = await App.axios_request_token(redirectUrl,"GET",token)
             // let redirectResponse = await App.axios_req(token)
-            window.location = "http://localhost:5000/upload"  + `?token=${token}`;
+            window.location = "http://localhost:9000/upload"  + `?token=${token}`;
             // if(redirectResponse) {
             //     // console.log(redirectResponse)
             //     window.location = "http://localhost:5000/upload"  + `?token=${token}`;
@@ -120,7 +120,7 @@
                     // method: 'POST',
                     method: 'GET',
                     headers: { 'content-type': 'application/json',"authorization" : `Bearer ${token}`},
-                    url : 'http://localhost:5000/upload',
+                    url : 'http://localhost:9000/upload',
                     // data: reqBody
                 });
                 // console.log(res)
@@ -141,7 +141,7 @@
           return new Promise(async(resolve,reject)=>{
             const options = {
               method: 'GET',
-              url: 'http://localhost:5000/upload',
+              url: 'http://localhost:9000/upload',
               headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${token}` 

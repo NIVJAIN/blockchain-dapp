@@ -4,7 +4,7 @@ var client = new kafka.KafkaClient();
 var topicsToCreate = [{
     topic: 'nivjain',
     partitions: 5,
-    replicationFactor: 2
+    replicationFactor: 1
   }
 ];
 

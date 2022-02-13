@@ -15,7 +15,9 @@ class MongoDatabase {
         MONGO_PORT,
         MONGO_DB
       } = process.env;
-    const db = 'mongodb://root:$iloveblockchain@localhost:27017/blockchain?authSource=admin'  
+    // const db = 'mongodb://root:$iloveblockchain@localhost:27017/blockchain?authSource=admin'  
+    const db = 'mongodb://localhost:27017/blockchain?'  // Docker mongo run -p 27017:27017 mongo:latest
+
     const options = {
         //   sslCA: ca,
           useNewUrlParser: true,

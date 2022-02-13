@@ -1,4 +1,4 @@
-@baseUrl=http://localhost:5000
+@baseUrl=http://localhost:9000
 ###
 GET {{baseUrl}}/blockchain/check
 ###
@@ -12,8 +12,36 @@ Content-Type: application/json
 ###
 GET {{baseUrl}}/blockchain/email/niv.jain@gmail.com
 ### cmd alt c to generate code
+
+
+POST {{baseUrl}}/user/signup
+content-type: application/json
+
+{
+	"email": "niv.jain@gmail.com",
+	"password": "nivjain",
+	"password2": "nivjain",
+	"orgid": "IMDA"
+}
+
+###
+# @name login
+POST {{baseUrl}}/user/login
+content-type: application/json
+
+{
+	"email": "niv.jain@gmail.com",
+	"password": "nivjain",
+	"orgid": "IMDA"
+}
+###
+@authToken = {{login.response.body.token}}
+@refreshToken = {{login.response.body.refreshToken}}
+###
+
 POST {{baseUrl}}/blockchain/pdf
 Content-Type: application/json
+Authorization: Bearer {{authToken}}
 
 {
     "email" : "niv.jain@gmail.com",

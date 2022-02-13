@@ -5,17 +5,45 @@
 | 2             | Sequence Diagram                 | Na            |
 
 
+# Application's and Port
+```
+nodejs : 9000
+mongodb: 27017
+kafka: 2181
+ganache-cli: 7545
+```
+
 ## Pre requisite
 ```
-0. Install Ganache 
+0. Install Ganache and run on port 7545
+npm install -g ganache-cli
+ganache-cli -p 7545
+# kafka installation and run on port 9092
+git clone https://github.com/NIVJAIN/kafka-stack-docker-compose.git
+cd kafka-stack-docker-compose
+docker-compose -f zk-single-kafka-multiple.yml up
+#docker-compose -f zk-single-kafka-multiple.yml down
 1. Kafka docker-compose cluster must be running
+λ  kafka-stack-docker-compose git:(master) ✗ docker-compose -f zk-single-kafka-multiple.yml ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+kafka1              "/etc/confluent/dock…"   kafka1              running             0.0.0.0:9092->9092/tcp
+kafka2              "/etc/confluent/dock…"   kafka2              running             0.0.0.0:9093->9093/tcp
+zoo1                "/etc/confluent/dock…"   zoo1                running             0.0.0.0:2181->2181/tcp
+
 2. Mongodb local installation or Atlas or AWS DocDB. 
+docker run -p 27017:27017 -d mongo:latest
 3. MongoDB, change the connection string in database folder.
 4. Create token collection TTL, this is for auto deletion of document in mongodb for refresh tokens, follow below steps
-
-
+# getinto mongo console or inside the mongo container
+docker exec -it <mongoid> bash
+# launch mongo
+mongo
+show dbs
+use blockchain
+show collections 
+check tokens collection exists, if exist then execute below command to create index on token collections
 # create index on tokens collections 
-db.tokens.createIndex({"createdat":1}, {expireAfterSeconds:60})
+db.tokens.createIndex({"createdat":1}, {expireAfterSeconds:300})
 # check the index creation is successfull with the expiry time set 
 db.tokens.getIndexes()
 # create a document inside tokens collections
@@ -33,7 +61,8 @@ db.tokens.createIndex({"createat":1}, {expireAfterSeconds:60})You will need to c
 1. git clone <repo>
 2. truffle compile
 3. truffle networks --clean 
-4. truffle migrate 
+4. truffle migrate or truffle migrate --network develop
+5. cd middleware && node CreateKafkaTopic.js && node CreateKafkaTopic.js (to check topic has been created)
 5. npm run start
 6. https://localhost:5000
 ```

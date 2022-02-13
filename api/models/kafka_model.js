@@ -1,6 +1,6 @@
 const kafkaProducer = require('../../middlewares/kafka/HighLevelProducer');
 const kafkaConsumer = require('../../middlewares/kafka/HighLevelConsumer');
-// kafkaConsumer.initiateKafkaConsumerGroup('testGroup', 'nivjain');
+// kafkaConsumer.initinateKafkaConsumerGroup('testGroup', 'nivjain');
 const SIMPLE_PRODUCER_KAFKA = async (_payload) =>{
     return new Promise(async (resolve, reject) => {
        await kafkaProducer.produceJob('nivjain', _payload, false,async function(err, data){

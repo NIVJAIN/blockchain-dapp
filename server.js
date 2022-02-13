@@ -7,7 +7,7 @@ const express = require('express')
 const fs = require('fs')
 const app = express();
 const bodyParser = require('body-parser')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 9000
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const path = require('path')
@@ -24,6 +24,14 @@ const pipeline = promisify(require("stream").pipeline);
 const Provider = require('./middlewares/blockchain/provider')
 const provider = new Provider()
 const web3 = provider.web3
+
+/* ====================================================
+                    PRINT PROCESS.ENV FROM .ENV FILE
+======================================================*/ 
+console.log("=====================Process.env========================")
+console.log(process.env)
+console.log("=====================Process.env========================")
+
 /* ====================================================
                     MULTER SETUP
 ======================================================*/ 

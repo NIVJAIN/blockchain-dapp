@@ -379,7 +379,7 @@
     //             return false;
     //         }
     //         console.log(_pdf_file)
-    //         let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file)
+    //         let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file)
     //         console.log(f_upload)
     //         let reqBody = JSON.stringify({
     //             email: 'niv.jain@gmail.com',
@@ -387,7 +387,7 @@
     //             companyemail: _companyemail,
     //             pdf_filename: f_upload
     //         }); 
-    //         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+    //         let urlAxios = 'http://localhost:9000/blockchain/pdf'
     //         let methodType = 'POST'
     //         let response = await App.axios_request(urlAxios,methodType,reqBody)
     //         console.log("response",response)  
@@ -420,7 +420,7 @@
     //         $('#bodyMsg').html(error.error);
     //         $('#myModal').modal("show");
     //         try {
-    //           let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+    //           let getNewToken = await App.axios_request("http://localhost:9000/user/reftoken", "POST", {})
     //           App.BlockchainRegistration(e);
     //         } catch(error){
     //           console.log("refresh token", error)
@@ -452,8 +452,8 @@
                 return false;
             }
             var admin_email = "niv.jain@gmail.com"
-            let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file,admin_email)
-            // let f_upload = await App.file_upload("http://localhost:5000/blockchain/buffer", "POST", profile_file, admin_email)
+            let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file,admin_email)
+            // let f_upload = await App.file_upload("http://localhost:9000/blockchain/buffer", "POST", profile_file, admin_email)
             console.log("f_upload", f_upload)
             // return
             console.log(f_upload)
@@ -490,7 +490,7 @@
             // $('#bodyMsg').html(error.error);
             // $('#myModal').modal("show");
             // try {
-            //   let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+            //   let getNewToken = await App.axios_request("http://localhost:9000/user/reftoken", "POST", {})
             //   // App.BlockchainRegistration(e);
             //   console.log("getNewToken", getNewToken)
             // } catch(error){
@@ -510,7 +510,7 @@
           $('#bodyMsg').html(msg);
             $('#myModal').modal("show");
             try {
-              let getNewToken = await App.axios_request("http://localhost:5000/user/reftoken", "POST", {})
+              let getNewToken = await App.axios_request("http://localhost:9000/user/reftoken", "POST", {})
               // App.BlockchainRegistration(e);
               resolve(getNewToken)
               console.log("getNewToken", getNewToken)
@@ -544,8 +544,8 @@
                 return false;
             }
             var admin_email = "niv.jain@gmail.com"
-            // let f_upload = await App.file_upload("http://localhost:5000/upload-profile-pic", "POST", profile_file,admin_email)
-            let f_upload = await App.file_upload("http://localhost:5000/blockchain/buffer", "POST", profile_file, admin_email)
+            // let f_upload = await App.file_upload("http://localhost:9000/upload-profile-pic", "POST", profile_file,admin_email)
+            let f_upload = await App.file_upload("http://localhost:9000/blockchain/buffer", "POST", profile_file, admin_email)
             console.log("f_upload", f_upload)
             $('#bodyMsg').html(f_upload.result);
             $('#myModal').modal("show");         
@@ -562,7 +562,7 @@
       Pdf_Txn : async function(reqBody){
         return new Promise(async(resolve,reject)=>{
           try {
-            let urlAxios = 'http://localhost:5000/blockchain/pdf'
+            let urlAxios = 'http://localhost:9000/blockchain/pdf'
             let methodType = 'POST'
             let response = await App.axios_request(urlAxios,methodType,reqBody)
             console.log("pdf_txn", response)
@@ -602,7 +602,7 @@
                   + '</td><td text-align=left">' 
                   + "pdf_link"
                   + '</td><td text-align=left"> ' 
-                  + `<a target="_blank" rel="noopener noreferrer"  href="http://localhost:5000/${pdf_filename}">${pdf_filename}</a>`
+                  + `<a target="_blank" rel="noopener noreferrer"  href="http://localhost:9000/${pdf_filename}">${pdf_filename}</a>`
                   + '</td></tr>';
             $('.tabBody').find('tbody').append(pdf_href);
           resolve(true)
@@ -726,7 +726,7 @@ window.App = App;
 //             companyemail: 'applewatch@gmail.com',
 //             pdf_filename: 'apple.pdf'
 //         });
-//         let urlAxios = 'http://localhost:5000/blockchain/pdf'
+//         let urlAxios = 'http://localhost:9000/blockchain/pdf'
 //         let methodType = 'POST'
 //         let response = await App.axios_request(urlAxios,methodType,reqBody)
 //         console.log(response)
@@ -814,7 +814,7 @@ window.addEventListener("load", async function() {
 //     try {
 //         const options = {
 //             method: 'POST',
-//             url: 'http://localhost:5000/blockchain/pdf',
+//             url: 'http://localhost:9000/blockchain/pdf',
 //             // headers: {'user-agent': 'vscode-restclient', 'content-type': 'application/json'},
 //             headers: { 'content-type': 'application/json'},
 //             data: {
